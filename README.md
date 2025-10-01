@@ -5,7 +5,7 @@ A simple Python client for the [Sheetsight](https://sheetsight.ai) search API.
 ## Installation
 
 ```bash
-pip install sheetsight-py
+pip install sheetsight
 ```
 
 ## Quick Start
@@ -28,7 +28,7 @@ for group in results['grouped_results']:
     print(f"\n{part['partNumber']} by {manufacturer['displayName']}")
     print(f"Description: {part['description']}")
     print(f"Matches: {group['matchCount']}")
-    
+
     # Show best match content
     if group['bestMatch']:
         content_preview = group['bestMatch']['content'][:200]
@@ -60,8 +60,9 @@ Convenience method for searching with simplified parameters.
 Full-featured search method with all available options.
 
 **Options:**
+
 - `maxResults`: Maximum number of results (1-50, default: 20)
-- `maxMatchesPerPart`: Maximum matches per part (1-10, default: 3)  
+- `maxMatchesPerPart`: Maximum matches per part (1-10, default: 3)
 - `includePartInfo`: Include part information (default: True)
 - `groupByPart`: Group results by part (default: True)
 
@@ -89,6 +90,8 @@ except APIError as e:
 
 ## License
 
-MIT
+[MIT](./LICENSE)
 
+## Contributing
 
+Contributions are welcome! Whether it's bug fixes, feature additions, or documentation improvements, we appreciate your help in making this project better. For major changes or new features, please open an issue first to discuss what you would like to change.
